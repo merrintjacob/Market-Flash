@@ -1,0 +1,82 @@
+--Sample Data for the MarketFlash DB 
+
+--Insert to Locations Table
+
+
+INSERT INTO Locations VALUES ('LOC01','USA','Test Descritpion');
+INSERT INTO Locations VALUES ( 'LOC05','Japan','Test Descritpion');
+INSERT INTO Locations VALUES ( 'LOC06','UK','Test Descritpion');
+INSERT INTO Locations VALUES ( 'LOC07','Australia','Test Descritpion');
+INSERT INTO Locations VALUES ( 'LOC08','India','Test Descritpion');
+                       
+--Insert to Campaign_Type Table
+
+INSERT INTO Campaign_type Values ('CT01','Sign Up','Test CampaignType');
+INSERT INTO Campaign_type Values ('CT02','Sales','Test CampaignType');
+
+-- Insert to Channels Table
+
+INSERT INTO Channels Values ('C001','YouTube',' Test Channel');
+INSERT INTO Channels Values ('C002','Email',' Test Channel');
+INSERT INTO Channels Values ('C003','TikTok',' Test Channel');
+INSERT INTO Channels Values ('C004','Instagram',' Test Channel');
+INSERT INTO Channels Values ('C005','Facebook',' Test Channel');
+
+--INSERT INTO Client Table
+
+INSERT INTO Client Values ('CL001','Bradley, Jackson and Miller','190 Bradley Mill Suite 940, Craigbury, MO 18832','hansonpatrick@hunt.com','123456789','Dr. David Glass Jr.');
+INSERT INTO Client Values ('CL002','Anderson Inc','Unit 0015 Box 7678, DPO AE 55030-2816','jgomez@gmail.com','123456789','Morgan Gross');
+INSERT INTO Client Values ('CL003','Bernard and Sons','8622 Ricky Knoll, New Jenniferville, GA 79764-9207','johnsonrobert@white.com','123456789','Julia Moore');
+INSERT INTO Client Values ('CL004','Arnold, Smith and Ward','Unit 2316 Box 4709, DPO AA 90463-5066','michelle93@pineda-small.com','123456789','Karen Bryan');
+INSERT INTO Client Values ('CL005','Benjamin and Sons','861 Knox Cape Apt. 731, Lake John, CA 62474','lrice@yahoo.com','123456789','Derek Juarez');
+
+
+--INSERT INTO Employees Table
+
+INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId) VALUES ('E0006','Markus','Callahan','test address,Lakeside','555-555-5555','markus.callahan@example.com',Null);
+INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId) VALUES ('E0001','Aaron','Faulkner','123 Maple St, Springfield','555-123-4567','aaron.faulkner@example.com','E0006');
+INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId) VALUES ('E0002','Jesus','Rivera','101 Cedar St, Greenfield','555-456-7890','jesus.rivera@example.com','E0001');
+INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId) VALUES ('E0003','Kyle','Serrano','202 Birch St, Lakeside','555-567-8901','kyle.serrano@example.com','E0006');
+INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId) VALUES ('E0004','Melissa','Haynes','404 Spruce St, Mountaintown','555-789-0123','melissa.haynes@example.com','E0003');
+INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId) VALUES ('E0005','Thomas','Ryan','606 Willow St, Meadowbrook','555-901-2345','thomas.ryan@example.com','E0001');
+
+
+
+--INSERT INTO Campaigns Table
+
+INSERT INTO Campaigns(CampaignId, StartDate, EndDate, ChannelId, ClientId, Audience,LocationId, Views, Engagement, Clicks, Conversions, Expenses, Sales,EmpId, CampaignTypeId)
+values (
+  'C050','2023-03-10','2023-04-06','C004','CL002','Female 18-40','LOC07','72501','6711','4852','168','13841,04',NULL,'E0005','CT01');
+  INSERT INTO Campaigns (CampaignId, StartDate, EndDate, ChannelId, ClientId, Audience,LocationId, Views, Engagement, Clicks, Conversions, Expenses, Sales,EmpId, CampaignTypeId)
+values (
+  'C069','2023-06-01','2023-06-10','C002','CL003','Adults 18-40','LOC08','NA','8233','1358','456','31296,65','49397,38','E0005','CT02');
+INSERT INTO Campaigns (CampaignId, StartDate, EndDate, ChannelId, ClientId, Audience,LocationId, Views, Engagement, Clicks, Conversions, Expenses, Sales,EmpId, CampaignTypeId)
+values (
+  'C085','2023-06-19','2023-06-26','C003','CL003','Teens 13-19','LOC06','38814','3125','1259','798','19608,69',NULL,'E0005','CT01');
+INSERT INTO Campaigns (CampaignId, StartDate, EndDate, ChannelId, ClientId, Audience,LocationId, Views, Engagement, Clicks, Conversions, Expenses, Sales,EmpId, CampaignTypeId)
+values (
+  'C087','2023-01-05','2023-01-13','C001','CL002','Teens 13-19','LOC01','17483','8443','2784','750','6503,58','25117,44','E0005','CT02');
+INSERT INTO Campaigns (CampaignId, StartDate, EndDate, ChannelId, ClientId, Audience,LocationId, Views, Engagement, Clicks, Conversions, Expenses, Sales,EmpId, CampaignTypeId)
+values (
+  'C160','2023-02-02','2023-02-20','C003','CL002','Female 18-40','LOC01','24396','8189','2715','16','46545,06',NULL,'E0005','CT01');
+INSERT INTO Campaigns (CampaignId, StartDate, EndDate, ChannelId, ClientId, Audience,LocationId, Views, Engagement, Clicks, Conversions, Expenses, Sales,EmpId, CampaignTypeId)
+values (
+  'C187','2023-08-24','2023-09-04','C005','CL005','Adults 18-40','LOC06','48590','4195','653','203','5748,2',NULL,'E0005','CT01');
+INSERT INTO Campaigns (CampaignId, StartDate, EndDate, ChannelId, ClientId, Audience,LocationId, Views, Engagement, Clicks, Conversions, Expenses, Sales,EmpId, CampaignTypeId)
+values (
+  'C221','2023-05-03','2023-05-17','C003','CL002','Adults 18-40','LOC05','26525','654','3983','470','2085,65','50238,41','E0005','CT02');
+INSERT INTO Campaigns (CampaignId, StartDate, EndDate, ChannelId, ClientId, Audience,LocationId, Views, Engagement, Clicks, Conversions, Expenses, Sales,EmpId, CampaignTypeId)
+values (
+  'C291','2023-10-24','2023-11-18','C004','CL002','Seniors 60+','LOC08','46400','1744','2307','693','22702,47',NULL,'E0005','CT01');
+INSERT INTO Campaigns (CampaignId, StartDate, EndDate, ChannelId, ClientId, Audience,LocationId, Views, Engagement, Clicks, Conversions, Expenses, Sales,EmpId, CampaignTypeId)
+values (
+  'C309','2023-02-07','2023-03-05','C003','CL005','Male 18-40','LOC06','81806','4085','742','887','8596,07','56240,83','E0005','CT02');
+
+
+
+
+
+
+
+
+

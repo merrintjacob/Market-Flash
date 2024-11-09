@@ -1,0 +1,84 @@
+_Create the Database#
+CREATE DATABASE MarketFlashDB;
+Use MarketFlashDB;
+
+--Table for Locations in which Campaign was done
+
+CREATE TABLE Locations (
+    LocationId VARCHAR(20) NOT NULL PRIMARY KEY,
+    Location VARCHAR(20) NOT NULL,
+    Description VARCHAR(20) 
+);
+
+--Table for Channels through which Campaign was done
+
+CREATE TABLE Channels (
+    ChannelID VARCHAR(20) NOT NULL PRIMARY KEY,
+    ChannelName VARCHAR(20) NOT NULL,
+    Descritpion VARCHAR(20) NOT NULL
+  );
+
+--Table for Type of Campaign  done
+
+CREATE TABLE Campaign_type (
+    CampaignTypeId VARCHAR(20) NOT NULL PRIMARY KEY,
+    CampaignType VARCHAR(20) NOT NULL,
+    Descritpion VARCHAR(20) NOT NULL
+);
+
+--Table for the Customer/Client Details
+
+CREATE TABLE Client (
+    ClientId VARCHAR(20) NOT NULL PRIMARY KEY,
+    ClientName VARCHAR(200) NOT NULL,
+    ClientAddress VARCHAR(200) NOT NULL,
+    Email VARCHAR(20) NOT NULL UNIQUE,
+    Phone VARCHAR(20) NOT NULL,
+    ContactPerson VARCHAR(20) NOT NULL
+);
+
+--Table for the Employees Details
+
+CREATE TABLE Employees (
+    EmpId VARCHAR(20) NOT NULL PRIMARY KEY,
+    FName VARCHAR(20) NOT NULL,
+    LName VARCHAR(20) NOT NULL,
+    Address VARCHAR(20) NOT NULL,
+    Email VARCHAR(20) NOT NULL UNIQUE,
+    Phone VARCHAR(20) NOT NULL,
+    SupervisorId VARCHAR(20) ,
+    FOREIGN KEY (SupervisorId) REFERENCES Employees(EmpId)
+);
+
+--Table for Department Details
+
+CREATE TABLE Departments (
+    DeptId VARCHAR(20) NOT NULL PRIMARY KEY,
+    Department VARCHAR(20) NOT NULL,
+    Description VARCHAR(20)    
+);
+
+--Table for Campaigns Details
+
+CREATE TABLE Campaigns (
+    CampaignId VARCHAR(20) NOT NULL PRIMARY KEY,
+    StartDate DATETIME NOT NULL,
+    EndDate DATETIME NOT NULL ,
+  	ChannelId VARCHAR(20) NOT NULL,
+    ClientId VARCHAR(20) NOT NULL,
+    Audience VARCHAR(20) NOT NULL,
+    LocationId VARCHAR(20) NOT NULL,
+    Views INT NOT NULL,
+    Engagement INT NOT NULL,
+    Clicks INT NOT NULL,
+    Conversions INT NOT NULL,
+    Expenses Float NOT NULL,
+  	Sales FLOAT,
+    EmpId VARCHAR(20) NOT NULL,
+  	CampaignTypeId VARCHAR(20) NOT NULL,
+  	FOREIGN KEY (EmpId) REFERENCES Employees(EmpId),
+  	FOREIGN KEY (ChannelId) REFERENCES Channels(ChannelId),
+    FOREIGN KEY (ClientId) REFERENCES Client(ClientId),
+    FOREIGN KEY (LocationId) REFERENCES Locations(LocationId),
+    FOREIGN KEY (CampaignTypeId) REFERENCES Campaign_Type(CampaignTypeId)
+);

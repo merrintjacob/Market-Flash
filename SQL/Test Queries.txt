@@ -1,0 +1,18 @@
+--SQL JOIN Queries to test the relationship between Tables:
+
+Select Campaigns.CampaignId,Campaigns.StartDate,Campaigns.EndDate,Campaigns.Conversions
+from Campaigns 
+join Campaign_type on Campaigns.CampaignTypeId =Campaign_Type.CampaignTypeId
+where Campaign_Type.CampaignType='Sales'
+
+Select Campaigns.Audience,avg(Campaigns.Conversions) as Avg_Conversions
+from Campaigns 
+join Campaign_type on Campaigns.CampaignTypeId =Campaign_Type.CampaignTypeId
+where Campaign_Type.CampaignType='Sales'
+group by 1
+
+Select Channels.ChannelName as Channel ,avg(Campaigns.Conversions) as Avg_Conversions
+from Campaigns 
+left join Channels on Campaigns.ChannelId=Channels.ChannelId
+group by 1
+order by 1
