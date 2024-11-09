@@ -41,16 +41,6 @@ These files are key to achieving the following goals:
 
 ---
 
-## Project Roadmap
-
-| Step | Description | Estimated Time |
-|------|-------------|----------------|
-| **1** | Interview with Markus | 1-2 days |
-| **2** | ERD and Database Design | 3-4 days |
-| **3** | SQL Schema Implementation | 5-7 days |
-
----
-
 ## Additional Information
 
 For more detailed information on the project or to contribute, feel free to open an issue or submit a pull request. We appreciate your feedback and contributions to improving this project!
