@@ -27,7 +27,7 @@ The Channels table contains information about different marketing channels.
 |--------------------|--------------|-------------|
 | ChannelId          | VARCHAR(20)  | PK, NN      |
 | ChannelName        | VARCHAR(20)  |             |
-| ChannelDescription | VARCHAR(20)  |             |
+| Description        | VARCHAR(20)  |             |
 
 ## 3. Locations
 
@@ -37,7 +37,7 @@ The Locations table contains details of the locations where campaigns may be hel
 |---------------------|--------------|-------------|
 | LocationId          | VARCHAR(20)  | PK, NN      |
 | LocationName        | VARCHAR(20)  | NN          |
-| LocationDescription | VARCHAR(20)  |             |
+| Description         | VARCHAR(20)  |             |
 
 ## 4. Employees
 
@@ -57,6 +57,19 @@ The Employees table stores employee information, including supervisors and depar
 
 
 
-
 ### Relationships
+
+The relationships between the tables are as follows:
+
+- Client has many Campaigns (1-to-many relationship)
+- Campaign belongs to Client and Channel (many-to-1 relationship)
+- Campaign has a Location (many-to-1 relationship)
+- Employee works on many Campaigns (1-to-many relationship)
+- Campaign has a CampaignType (many-to-1 relationship)
+- Employee may have a Supervisor (self-referencing relationship in Employees table)
+- Employee works in a Department (many-to-1 relationship)
+
 #### ERD Diagram
+
+![ERD]()
+
