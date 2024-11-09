@@ -54,8 +54,42 @@ The Employees table stores employee information, including supervisors and depar
 | SupervisorId  | VARCHAR(20)  | FK (ref: EmpId)              |
 | DeptId        | VARCHAR(20)  | FK (ref: Departments.DeptId) |
 
+## 5. Campaigns
 
+The Campaigns table tracks marketing campaigns, including the campaign details and performance metrics.
 
+| Field          | Type        | Constraints                         |
+|----------------|-------------|-------------------------------------|
+| CampaignId     | VARCHAR(20) | PK, NN                              |
+| StartDate      | DATETIME    | NN                                  |
+| EndDate        | DATETIME    | NN                                  |
+| ChannelId      | VARCHAR(20) | FK (ref: Channels.ChannelId)        |
+| ClientId       | VARCHAR(20) | FK (ref: Client.ClientId)           |
+| Audience       | VARCHAR(20) | NN                                  |
+| Likes          | INT         | NN                                  |
+| Clicks         | INT         | NN                                  |
+| Conversions    | INT         | NN                                  |
+| Expenses       | FLOAT       | NN                                  |
+| LocationId     | VARCHAR(20) | FK (ref: Locations.LocationId)      |
+| Sales          | FLOAT       |                                     |
+| CampaignTypeId | VARCHAR(20) | FK (ref: CampaignTypes.TypeId)      |
+| EmpId          | VARCHAR(20) | FK (ref: Employees.EmpId)           |
+
+## 6. CampaignTypes
+
+| Field          | Type        | Constraints  |
+|----------------|-------------|--------------|
+| CampaignTypeId | VARCHAR(20) | PK, NN       |
+| CampaignType   | VARCHAR(20) | NN           |
+| Descritpion    | VARCHAR(20) |              |
+
+## 7. Departments
+
+| Field        | Type        | Constraints  |
+|--------------|-------------|--------------|
+| DeptId       | VARCHAR(20) | PK, NN       |
+| Department   | VARCHAR(20) | NN           |
+| Description  | VARCHAR(20) |              |
 
 ### Relationships
 
