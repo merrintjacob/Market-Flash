@@ -19,6 +19,44 @@ The Client table stores information about clients participating in campaigns.
 | ContactPerson  | VARCHAR(20)  | NN              |
 
 
-## 2. 
+## 2. Channels
+
+The Channels table contains information about different marketing channels.
+
+| Field              | Type         | Constraints |
+|--------------------|--------------|-------------|
+| ChannelId          | VARCHAR(20)  | PK, NN      |
+| ChannelName        | VARCHAR(20)  |             |
+| ChannelDescription | VARCHAR(20)  |             |
+
+## 3. Locations
+
+The Locations table contains details of the locations where campaigns may be held.
+
+| Field               | Type         | Constraints |
+|---------------------|--------------|-------------|
+| LocationId          | VARCHAR(20)  | PK, NN      |
+| LocationName        | VARCHAR(20)  | NN          |
+| LocationDescription | VARCHAR(20)  |             |
+
+## 4. Employees
+
+The Employees table stores employee information, including supervisors and departments.
+
+| Field         | Type         | Constraints                  |
+|---------------|--------------|------------------------------|
+| EmpId         | VARCHAR(20)  | PK, NN                       |
+| FName         | VARCHAR(20)  | NN                           |
+| LName         | VARCHAR(20)  | NN                           |
+| Address       | VARCHAR(20)  | NN                           |
+| Email         | DATETIME     | NN                           |
+| Phone         | DATETIME     | NN                           |
+| SupervisorId  | VARCHAR(20)  | FK (ref: EmpId)              |
+| DeptId        | VARCHAR(20)  | FK (ref: Departments.DeptId) |
+
+
+
+
+
 ### Relationships
 #### ERD Diagram
