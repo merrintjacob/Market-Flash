@@ -47,7 +47,9 @@ CREATE TABLE Employees (
     Email VARCHAR(20) NOT NULL UNIQUE,
     Phone VARCHAR(20) NOT NULL,
     SupervisorId VARCHAR(20) ,
-    FOREIGN KEY (SupervisorId) REFERENCES Employees(EmpId)
+    DeptId VARCHAR(20),
+    FOREIGN KEY (SupervisorId) REFERENCES Employees(EmpId),
+    FOREIGN KEY (DeptId) REFERENCES Departments(DeptId)
 );
 
 --Table for Department Details
