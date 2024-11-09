@@ -36,7 +36,7 @@ The Locations table contains details of the locations where campaigns may be hel
 | Field               | Type         | Constraints |
 |---------------------|--------------|-------------|
 | LocationId          | VARCHAR(20)  | PK, NN      |
-| LocationName        | VARCHAR(20)  | NN          |
+| Location            | VARCHAR(20)  | NN          |
 | Description         | VARCHAR(20)  |             |
 
 ## 4. Employees
@@ -66,7 +66,7 @@ The Campaigns table tracks marketing campaigns, including the campaign details a
 | ChannelId      | VARCHAR(20) | FK (ref: Channels.ChannelId)        |
 | ClientId       | VARCHAR(20) | FK (ref: Client.ClientId)           |
 | Audience       | VARCHAR(20) | NN                                  |
-| Likes          | INT         | NN                                  |
+| Views          | INT         | NN                                  |
 | Clicks         | INT         | NN                                  |
 | Conversions    | INT         | NN                                  |
 | Expenses       | FLOAT       | NN                                  |
