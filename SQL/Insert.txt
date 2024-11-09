@@ -30,15 +30,21 @@ INSERT INTO Client Values ('CL003','Bernard and Sons','8622 Ricky Knoll, New Jen
 INSERT INTO Client Values ('CL004','Arnold, Smith and Ward','Unit 2316 Box 4709, DPO AA 90463-5066','michelle93@pineda-small.com','123456789','Karen Bryan');
 INSERT INTO Client Values ('CL005','Benjamin and Sons','861 Knox Cape Apt. 731, Lake John, CA 62474','lrice@yahoo.com','123456789','Derek Juarez');
 
+-- Insert data into Departments table
+INSERT INTO Departments (DeptId, Department, Description)
+VALUES 
+    ('D001', 'Marketing', 'Marketing Department'),
+    ('D002', 'Sales', 'Sales Department');
+
 
 --INSERT INTO Employees Table
 
-INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId) VALUES ('E0006','Markus','Callahan','test address,Lakeside','555-555-5555','markus.callahan@example.com',Null);
-INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId) VALUES ('E0001','Aaron','Faulkner','123 Maple St, Springfield','555-123-4567','aaron.faulkner@example.com','E0006');
-INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId) VALUES ('E0002','Jesus','Rivera','101 Cedar St, Greenfield','555-456-7890','jesus.rivera@example.com','E0001');
-INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId) VALUES ('E0003','Kyle','Serrano','202 Birch St, Lakeside','555-567-8901','kyle.serrano@example.com','E0006');
-INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId) VALUES ('E0004','Melissa','Haynes','404 Spruce St, Mountaintown','555-789-0123','melissa.haynes@example.com','E0003');
-INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId) VALUES ('E0005','Thomas','Ryan','606 Willow St, Meadowbrook','555-901-2345','thomas.ryan@example.com','E0001');
+INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId,DeptId) VALUES ('E0006','Markus','Callahan','test address,Lakeside','555-555-5555','markus.callahan@example.com',Null,'D001');
+INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId,DeptId)VALUES ('E0001','Aaron','Faulkner','123 Maple St, Springfield','555-123-4567','aaron.faulkner@example.com','E0006','D001');
+INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId,DeptId)  VALUES ('E0002','Jesus','Rivera','101 Cedar St, Greenfield','555-456-7890','jesus.rivera@example.com','E0001','D001');
+INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId,DeptId) VALUES ('E0003','Kyle','Serrano','202 Birch St, Lakeside','555-567-8901','kyle.serrano@example.com','E0006','D002');
+INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId,DeptId) VALUES ('E0004','Melissa','Haynes','404 Spruce St, Mountaintown','555-789-0123','melissa.haynes@example.com','E0003','D002');
+INSERT INTO Employees (EmpId, FName, LName, Address, Email, Phone, SupervisorId,DeptId) VALUES ('E0005','Thomas','Ryan','606 Willow St, Meadowbrook','555-901-2345','thomas.ryan@example.com','E0001','D002');
 
 
 
