@@ -1,9 +1,13 @@
 --SQL JOIN Queries to test the relationship between Tables:
 
+-- Get Campaign Details for the Campaign Type-->Sales
+
 Select Campaigns.CampaignId,Campaigns.StartDate,Campaigns.EndDate,Campaigns.Conversions
 from Campaigns 
 join Campaign_type on Campaigns.CampaignTypeId =Campaign_Type.CampaignTypeId
 where Campaign_Type.CampaignType='Sales'
+
+-- Get Avg Conversions based on the Audience
 
 Select Campaigns.Audience,avg(Campaigns.Conversions) as Avg_Conversions
 from Campaigns 
@@ -11,8 +15,85 @@ join Campaign_type on Campaigns.CampaignTypeId =Campaign_Type.CampaignTypeId
 where Campaign_Type.CampaignType='Sales'
 group by 1
 
+-- Get Avg Conversions based on the Channel 
+
 Select Channels.ChannelName as Channel ,avg(Campaigns.Conversions) as Avg_Conversions
 from Campaigns 
 left join Channels on Campaigns.ChannelId=Channels.ChannelId
 group by 1
 order by 1
+
+-- Get Campaign Details with Client and Channel Information:
+
+SELECT 
+    Campaigns.CampaignId,
+    Campaigns.StartDate,
+    Campaigns.EndDate,
+    Client.ClientName,
+    Channels.ChannelName,
+    Campaigns.Audience,
+    Campaigns.Views,
+    Campaigns.Clicks,
+    Campaigns.Conversions,
+    Campaigns.Sales
+FROM 
+    Campaigns
+JOIN 
+    Client ON Campaigns.ClientId = Client.ClientId
+JOIN 
+    Channels ON Campaigns.ChannelId = Channels.ChannelId;
+
+--Get Campaigns with Their Types and Assigned Employees:
+
+SELECT 
+    Campaigns.CampaignId,
+    Campaigns.StartDate,
+    Campaigns.EndDate,
+    Campaign_type.CampaignType AS CampaignType,
+    Employees.FName AS EmployeeFirstName,
+    Employees.LName AS EmployeeLastName
+FROM 
+    Campaigns
+JOIN 
+    Campaign_type ON Campaigns.CampaignTypeId = Campaign_type.CampaignTypeId
+JOIN 
+    Employees ON Campaigns.EmpId = Employees.EmpId;
+
+--Summarize Campaign Performance by Location:
+
+SELECT 
+    Locations.Location,
+    COUNT(Campaigns.CampaignId) AS TotalCampaigns,
+    SUM(Campaigns.Views) AS TotalViews,
+    SUM(Campaigns.Clicks) AS TotalClicks,
+    SUM(Campaigns.Conversions) AS TotalConversions,
+    SUM(Campaigns.Sales) AS TotalSales
+FROM 
+    Campaigns
+JOIN 
+    Locations ON Campaigns.LocationId = Locations.LocationId
+GROUP BY 
+    Locations.Location;
+
+
+--Get Client and Campaign Performance Information,
+--Provide a summary of each client’s campaigns, including likes, clicks, and conversions.
+
+SELECT 
+    Client.ClientName,
+    Campaigns.CampaignId,
+    Campaigns.Audience,
+    Campaigns.Views,
+    Campaigns.Clicks,
+    Campaigns.Conversions,
+    Campaigns.Sales
+FROM 
+    Client
+JOIN 
+    Campaigns ON Client.ClientId = Campaigns.ClientId;
+
+
+
+
+
+
