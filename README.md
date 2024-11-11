@@ -58,7 +58,7 @@ The insights derived from the analysis highlight areas of strength and opportuni
 
  ## Presentation 
  
-- A PowerPoint presentation summarizing the project insights.(./Presentation/Market%20Flash%20Campaign%20Performance.pdf))
+- A PowerPoint presentation summarizing the project insights.![PowerPoint Presentation: Market Flash Campaign Performance](./Presentation/Market%20Flash%20Campaign%20Performance.pdf)
 
 ## Future Work
 Additional analyses could include predictive modeling to forecast campaign performance and deeper analysis of engagement metrics to refine targeting strategies.
