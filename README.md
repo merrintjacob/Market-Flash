@@ -46,9 +46,11 @@ The insights derived from the analysis highlight areas of strength and opportuni
 - **Optimize by Location**: Tailor marketing strategies based on regional performance trends.
 
 ## Files
-- **ERD.png**: The Entity-Relationship Diagram illustrating the data structure.
-- **Dashboard.png**: Screenshot of the main dashboard showing KPIs by channel, audience, and location.
-- **Presentation (Updated_MarketFlash_Campaign_Performance_Presentation.pptx)**: A PowerPoint presentation summarizing the project insights.
+
+## Files
+--  The Entity-Relationship Diagram illustrating the data structure. **ERD.png** ![ERD Diagram](./ERD.png):
+- Screenshot of the main dashboard showing KPIs by channel, audience, and location. ![Dashboard](./Dashboard.png): 
+- A PowerPoint presentation summarizing the project insights.  [Updated Presentation](./Updated_MarketFlash_Campaign_Performance_Presentation.pptx): 
 
 ## Future Work
 Additional analyses could include predictive modeling to forecast campaign performance and deeper analysis of engagement metrics to refine targeting strategies.
