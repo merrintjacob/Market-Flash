@@ -48,13 +48,15 @@ The insights derived from the analysis highlight areas of strength and opportuni
 ## Files
 ## ERD 
 --  The Entity-Relationship Diagram illustrating the data structure. **ERD.png** ![ERD Diagram](./ERD/ERD.png):
-- Screenshot of the main dashboard showing KPIs by channel, audience, and location. ![Dashboard](./Dashboard/Dashboard.png):
-- ## Dashboard
 
-You can view the interactive Tableau dashboard here: [Market Flash Campaign Performance Dashboard](your_tableau_link_here)
+ ## Dashboard
+- Screenshot of the main dashboard showing KPIs by channel, audience, and location. ![Dashboard](./Dashboard/Dashboard.png)
 
-https://public.tableau.com/app/profile/teenu.merin.jacob/viz/MiniProject_MarketFlash_dashboard/Dashboard2
-- A PowerPoint presentation summarizing the project insights.  [Updated Presentation](./Updated_MarketFlash_Campaign_Performance_Presentation.pptx): 
+- You can also  view the interactive Tableau dashboard here: ([your_tableau_link_here](https://public.tableau.com/app/profile/teenu.merin.jacob/viz/MiniProject_MarketFlash_dashboard/Dashboard2))
+
+ ## Presentation 
+ 
+- A PowerPoint presentation summarizing the project insights. (./Presentation/MarkET Flash Campaign Performance): 
 
 ## Future Work
 Additional analyses could include predictive modeling to forecast campaign performance and deeper analysis of engagement metrics to refine targeting strategies.
