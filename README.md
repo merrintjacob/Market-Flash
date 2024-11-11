@@ -47,7 +47,7 @@ The insights derived from the analysis highlight areas of strength and opportuni
 
 ## Files
 --  The Entity-Relationship Diagram illustrating the data structure. **ERD.png** ![ERD Diagram](./ERD/ERD.png):
-- Screenshot of the main dashboard showing KPIs by channel, audience, and location. ![Dashboard](./Dashboard.png): 
+- Screenshot of the main dashboard showing KPIs by channel, audience, and location. ![Dashboard](./Dashboard/Dashboard.png): 
 - A PowerPoint presentation summarizing the project insights.  [Updated Presentation](./Updated_MarketFlash_Campaign_Performance_Presentation.pptx): 
 
 ## Future Work
