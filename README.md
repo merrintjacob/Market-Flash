@@ -46,8 +46,14 @@ The insights derived from the analysis highlight areas of strength and opportuni
 - **Optimize by Location**: Tailor marketing strategies based on regional performance trends.
 
 ## Files
+## ERD 
 --  The Entity-Relationship Diagram illustrating the data structure. **ERD.png** ![ERD Diagram](./ERD/ERD.png):
-- Screenshot of the main dashboard showing KPIs by channel, audience, and location. ![Dashboard](./Dashboard/Dashboard.png): 
+- Screenshot of the main dashboard showing KPIs by channel, audience, and location. ![Dashboard](./Dashboard/Dashboard.png):
+- ## Dashboard
+
+You can view the interactive Tableau dashboard here: [Market Flash Campaign Performance Dashboard](your_tableau_link_here)
+
+https://public.tableau.com/app/profile/teenu.merin.jacob/viz/MiniProject_MarketFlash_dashboard/Dashboard2
 - A PowerPoint presentation summarizing the project insights.  [Updated Presentation](./Updated_MarketFlash_Campaign_Performance_Presentation.pptx): 
 
 ## Future Work
