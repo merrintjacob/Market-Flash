@@ -47,7 +47,9 @@ The insights derived from the analysis highlight areas of strength and opportuni
 
 ## Files
 ## ERD 
---  The Entity-Relationship Diagram illustrating the data structure. **ERD.png** ![ERD Diagram](./ERD/ERD.png):
+--  The Entity-Relationship Diagram illustrating the data structure. **ERD.png** 
+
+![ERD Diagram](./ERD/ERD.png):
 
  ## Dashboard
 - Screenshot of the main dashboard showing KPIs by channel, audience, and location. ![Dashboard](./Dashboard/Dashboard.png)
@@ -56,7 +58,7 @@ The insights derived from the analysis highlight areas of strength and opportuni
 
  ## Presentation 
  
-- A PowerPoint presentation summarizing the project insights. (./Presentation/MarkET Flash Campaign Performance.pdf): 
+- A PowerPoint presentation summarizing the project insights. (./Presentation/Market Flash Campaign Performance.pdf): 
 
 ## Future Work
 Additional analyses could include predictive modeling to forecast campaign performance and deeper analysis of engagement metrics to refine targeting strategies.
